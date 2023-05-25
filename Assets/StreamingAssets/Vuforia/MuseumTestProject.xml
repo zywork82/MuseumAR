@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="Girl_with_a_Pearl_Earring" size="1.000000 1.183750" />
+    <ImageTarget name="Judith_Beheading_Holofernes" size="1.000000 1.216250" />
+    <ImageTarget name="The_Ambassadors" size="500.000000 492.500000" />
+  </Tracking>
+</QCARConfig>
