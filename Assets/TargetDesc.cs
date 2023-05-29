@@ -32,7 +32,7 @@ public class TargetDesc : MonoBehaviour
 
     // Girl with a Pearl Earring - 2 Character
     public void ChangeGIRLWithPearlEarring() {
-        charDesc.text = "The Girl - the painting is a tronie, a work that isn’t a portrait of a specific person; rather, it’s focused on depicting facial expressions. 'A young woman might have sat for Vermeer,' per Encyclopedia Britannica, 'but the painting is not meant to portray her or any specific individual.' ";
+        charDesc.text = "The Girl - the painting is a tronie, a work that isn’t a portrait of a specific person; rather, it’s focused on depicting facial expressions. 'A young woman might have sat for Vermeer,' per Encyclopedia Britannica, 'but the painting is not meant to portray her or any specific individual.'  ";
         panel.gameObject.SetActive(true);
     }
 

@@ -9,15 +9,22 @@ public class VirtualButton : MonoBehaviour
 {
    public GameObject canvas;
    public VirtualButtonBehaviour Vb;
-   // public TMP_Text targetDesc;
    public TextMeshProUGUI charDesc;
-//    public UnityEvent OtherFunctions;
+   ArtTitle at;
+   ArtistName an;
+   ArtDescriptions ad;
    
 //button control
    void Start()
    {
     Vb.RegisterOnButtonPressed(OnButtonPressed);
     Vb.RegisterOnButtonReleased(OnButtonReleased);
+    // at = GameObject.FindGameObjectWithTag("TagName").GetComponent<ArtTitle>();
+    // an = GameObject.FindGameObjectWithTag("TagName").GetComponent<ArtistName>();
+    // ad = GameObject.FindGameObjectWithTag("TagName").GetComponent<ArtDescriptions>();
+    at = GameObject.FindGameObjectWithTag("TagName").GetComponent<ArtTitle>();
+    an = GameObject.FindGameObjectWithTag("TagName").GetComponent<ArtistName>();
+    ad = GameObject.FindGameObjectWithTag("TagName").GetComponent<ArtDescriptions>();
 
     canvas.SetActive(false);
    }
@@ -33,31 +40,64 @@ public class VirtualButton : MonoBehaviour
     canvas.SetActive(false);
    }
 
+   public void GetScriptRef(int image) {
+    //The Ambassadors
+    at = GameObject.Find("ITTheAmbassadors/Canvas/PanelMain").GetComponent<ArtTitle>();
+    at = GameObject.Find("ITTheAmbassadors/Canvas/PanelMain").GetComponent<ArtTitle>();
+    at = GameObject.Find("ITTheAmbassadors/Canvas/PanelMain").GetComponent<ArtTitle>();
+   }
+
     public void ChangeDescription(string VbPressed) {
         switch (VbPressed) {
             case "VirtualButtonJean":
                 ChangeJean();
+                an.ChangeArtistTheAmbassadors();
+                at.ChangeTitleTheAmbassadors();
+                ad.ChangeDescTheAmbassadors();
                 break;
             case "VirtualButtonGeorges":
                 ChangeGeorges();
+                an.ChangeArtistTheAmbassadors();
+                at.ChangeTitleTheAmbassadors();
+                ad.ChangeDescTheAmbassadors();
                 break;
             case "VirtualButtonMomentoMori":
                 ChangeSkull();
+                an.ChangeArtistTheAmbassadors();
+                at.ChangeTitleTheAmbassadors();
+                ad.ChangeDescTheAmbassadors();
                 break;
+
             case "VirtualButtonGirl":
                 ChangeGIRLWithPearlEarring();
+                an.ChangeArtistPearlGirl();
+                at.ChangeTitleWithAPearlEarring();
+                ad.ChangeDescPearlGirl();
                 break;
             case "VirtualButtonPearl":
                 ChangePEARLGirlWithPearlEarring();
+                an.ChangeArtistPearlGirl();
+                at.ChangeTitleWithAPearlEarring();
+                ad.ChangeDescPearlGirl();
                 break;
+
             case "VirtualButtonJudith":
                 ChangeJudith();
+                an.ChangeArtistJudith();
+                at.ChangeTitleJudithBeheadingHolofernes();
+                ad.ChangeDescJudith();
                 break;
             case "VirtualButtonMaid":
                 ChangeMaid();
+                an.ChangeArtistJudith();
+                at.ChangeTitleJudithBeheadingHolofernes();
+                ad.ChangeDescJudith();
                 break;
             case "VirtualButtonHolofernes":
                 ChangeHolofernes();
+                an.ChangeArtistJudith();
+                at.ChangeTitleJudithBeheadingHolofernes();
+                ad.ChangeDescJudith();
                 break;
         }
         
