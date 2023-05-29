@@ -6,7 +6,7 @@ using TMPro;
 
 public class TargetDesc : MonoBehaviour
 {
-  public TextMeshProUGUI charDesc;
+    public TextMeshProUGUI charDesc;
     public GameObject panel;
 // MAX WORDS 60
     // The Ambassadors - 3 Characters
@@ -20,6 +20,7 @@ public class TargetDesc : MonoBehaviour
     public void ChangeGeorges()
     {
         charDesc.text = "Georges de Selve - He  was born in 1508 in Toulouse, France, to a noble family. He received an education in law and became a prominent diplomat and ecclesiastic figure during the Renaissance period. Selve served as a representative of the French crown and held various diplomatic posts throughout his career.";
+        Debug.Log("Changed description to Georges");
         panel.gameObject.SetActive(true);
     }
 
@@ -34,6 +35,7 @@ public class TargetDesc : MonoBehaviour
         charDesc.text = "The Girl - the painting is a tronie, a work that isn’t a portrait of a specific person; rather, it’s focused on depicting facial expressions. 'A young woman might have sat for Vermeer,' per Encyclopedia Britannica, 'but the painting is not meant to portray her or any specific individual.' ";
         panel.gameObject.SetActive(true);
     }
+
     public void ChangePEARLGirlWithPearlEarring() {
         charDesc.text = "The Pearl - delicately adorns the girl's earlobe, reflecting soft light and symbolizing purity, innocence, and feminine beauty. Its presence enhances her understated elegance, inviting contemplation of hidden desires. Vermeer's brushstrokes capture its exquisite texture, intensifying the painting's enigmatic allure. A silent dialogue beckons to unravel mysteries, where artistry and elegance intertwine.";
         panel.gameObject.SetActive(true);
