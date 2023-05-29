@@ -11,7 +11,7 @@ public class VirtualButton : MonoBehaviour
    public VirtualButtonBehaviour Vb;
    // public TMP_Text targetDesc;
    public TextMeshProUGUI charDesc;
-   public UnityEvent OtherFunctions;
+//    public UnityEvent OtherFunctions;
    
 //button control
    void Start()
@@ -25,11 +25,43 @@ public class VirtualButton : MonoBehaviour
    public void OnButtonPressed(VirtualButtonBehaviour vb)
    {
     canvas.SetActive(true);
+    ChangeDescription(vb.name);
    }
+
    public void OnButtonReleased(VirtualButtonBehaviour vb)
    {
     canvas.SetActive(false);
-  }
+   }
+
+    public void ChangeDescription(string VbPressed) {
+        switch (VbPressed) {
+            case "VirtualButtonJean":
+                ChangeJean();
+                break;
+            case "VirtualButtonGeorges":
+                ChangeGeorges();
+                break;
+            case "VirtualButtonMomentoMori":
+                ChangeSkull();
+                break;
+            case "VirtualButtonGirl":
+                ChangeGIRLWithPearlEarring();
+                break;
+            case "VirtualButtonPearl":
+                ChangePEARLGirlWithPearlEarring();
+                break;
+            case "VirtualButtonJudith":
+                ChangeJudith();
+                break;
+            case "VirtualButtonMaid":
+                ChangeMaid();
+                break;
+            case "VirtualButtonHolofernes":
+                ChangeHolofernes();
+                break;
+        }
+        
+    }
 
   // MAX WORDS 60
     // The Ambassadors - 3 Characters
